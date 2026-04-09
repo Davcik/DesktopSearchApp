@@ -65,10 +65,13 @@ The application includes a diagnostics panel in the main user interface so that 
 
 The application also includes file-system monitoring. Once a folder is indexed, the system can continue watching for additions, deletions, renames, and modifications, allowing the index to remain synchronized with the underlying file set.
 
-Supported File Types
+
+**Supported File Types**
+
 DesktopSearchApp is designed to support a wide range of file types. These include common office formats, plain text formats, research-oriented files, code files, and presentation documents.
 
 Core Supported Categories
+
 Word processing files: .docx, .doc
 
 PDF files: .pdf
@@ -89,10 +92,14 @@ Other academic files: .epub
 
 This file coverage reflects the project's focus on real-world research and analytical workflows, where useful information may exist in many different formats rather than in one uniform document class.
 
-Technical Architecture
+
+**Technical Architecture**
+
 DesktopSearchApp is built with C#, WPF, and .NET using a service-oriented internal structure. The architecture is modular, with individual services responsible for discrete tasks. This improves maintainability, testability, and extensibility.
 
-Core Architectural Components
+
+**Core Architectural Components**
+
 FileCrawlerService
 Responsible for scanning folders and discovering supported files for indexing.
 
@@ -121,6 +128,7 @@ The search engine is implemented using Lucene.NET. Lucene.NET provides full-text
 
 Each indexed document is stored with fields such as file path, file name, extension, title, extracted document text, OCR usage, extraction method, extraction status, and error-related metadata. This schema enables both retrieval and diagnostics-oriented display.
 
+
 The search process supports multiple search scopes:
 
 All searchable fields
@@ -131,10 +139,12 @@ Document text only
 
 The query logic combines exact-term search with prefix-based search so that results can include both highly specific matches and useful partial matches. This improves usability for users who may remember only part of a phrase or title.
 
-Indexing Workflow
+**Indexing Workflow**
+
 The indexing workflow begins with folder selection. Once a folder is chosen, the application scans the folder structure, identifies supported files, and passes them through the extraction and indexing pipeline.
 
-Indexing Steps
+**Indexing Steps**
+
 The user selects a folder.
 
 The system crawls the directory tree and identifies supported file types.
@@ -149,17 +159,23 @@ After completion, folder monitoring may be activated for incremental updates.
 
 A key design principle is fault tolerance. If a single file is malformed, inaccessible, or otherwise problematic, the application is designed to skip the file, log the issue, and continue indexing the remaining files. This is essential for practical use because real-world document repositories often contain inconsistent or damaged content.
 
-Document Extraction and OCR
+
+**Document Extraction and OCR**
+
 DesktopSearchApp was intentionally designed to handle more than plain text files. Many documents of practical importance, particularly scanned PDFs and images, require additional processing before they become searchable.
 
 For this reason, the project includes dedicated extraction-related services, including OCR-oriented components. These services make it possible to derive searchable text from non-text-native sources when feasible. The application also records whether OCR was used, which extraction method produced the text, and whether the extraction succeeded or failed.
 
 This information is important because it makes the search corpus more interpretable. Users can distinguish between text extracted directly from a source file and text produced through OCR, and they can identify files that may require reprocessing or manual review.
 
-Diagnostics and Reliability
-Diagnostics are a core feature of DesktopSearchApp rather than an afterthought. The application includes a diagnostics log that surfaces operational messages directly in the interface.
 
-Diagnostics Objectives
+**Diagnostics and Reliability**
+
+Diagnostics are a core feature of **DesktopSearchApp** rather than an afterthought. The application includes a diagnostics log that surfaces operational messages directly in the interface.
+
+
+_Diagnostics Objectives_
+
 To record application startup and shutdown events.
 
 To report folder selection and indexing activity.
@@ -175,7 +191,8 @@ A particularly important technical decision in the project was to prevent a sing
 Incremental Indexing and Folder Monitoring
 Once an index has been built, DesktopSearchApp can continue monitoring the indexed folder. This is achieved through a folder watcher that detects changes in the file system.
 
-Monitored Events
+_Monitored Events_
+
 File creation
 
 File modification
@@ -188,10 +205,13 @@ Detected changes are passed into the incremental indexing workflow so that the s
 
 Incremental indexing is particularly valuable in active project environments, research directories, and work folders where files are updated frequently.
 
-User Interface Design
+
+**User Interface Design**
+
 The user interface is implemented as a WPF desktop window organized around three functional regions: controls for indexing and searching, a results grid, and a combined preview and diagnostics area.
 
 Main Interface Areas
+
 Folder indexing toolbar for selecting a folder and building the index.
 
 Search controls for entering search terms and narrowing the scope.
@@ -204,10 +224,11 @@ Diagnostics panel for showing operational logs, warnings, and errors.
 
 The design is intentionally practical rather than ornamental. The aim is to support efficient use in desktop environments where clarity, speed, and visibility matter more than visual excess.
 
-Intended Use Cases
-DesktopSearchApp is suitable for several user groups and scenarios.
 
-Example Use Cases
+**Intended Use Cases**
+
+DesktopSearchApp is suitable for several user groups and scenarios:
+
 Academic researchers managing mixed-format document archives.
 
 Students searching across reading materials, notes, and project files.
@@ -220,10 +241,14 @@ Developers and knowledge workers who want a transparent and extensible desktop i
 
 The project is especially useful where users prefer local control over their data and want to avoid dependence on cloud indexing systems.
 
-Distribution and Repository Use
+
+**Distribution and Repository Use**
+
 The project is intended to be published on GitHub as a source repository. In addition, a ZIP package is provided for free download to make the project easier to distribute and access.
 
-Distribution Strategy
+
+_Distribution Strategy_
+
 GitHub repository: source code, documentation, and version history.
 
 ZIP package: convenient downloadable copy for users who prefer a packaged version.
@@ -232,15 +257,15 @@ Potential release asset: the ZIP file may also be attached to a GitHub Release f
 
 This dual distribution approach improves accessibility for both developers and general users.
 
-Build and Usage Notes
+
 System Requirements
 Windows 10 or later
 
-A compatible .NET and WPF development environment
 
 Access permissions to folders intended for indexing
 
-Basic Usage Workflow
+**Basic Usage Workflow**
+
 Launch the application.
 
 Select a folder for indexing.
@@ -251,35 +276,8 @@ Search across indexed file content and metadata.
 
 Apply file-type and scope filters if needed.
 
-Select a result to view preview information.
+Select a result to view the preview information.
 
 Double-click a result to open the original file.
 
 The Lucene index is stored locally in the user profile under application data, ensuring that the indexed content remains on the local machine.
-
-Future Development Possibilities
-DesktopSearchApp has been designed with extensibility in mind. Several enhancements could be developed in future versions.
-
-Potential Enhancements
-Richer preview rendering for additional file types.
-
-More advanced OCR controls and extraction-quality reporting.
-
-Configurable indexing policies and exclusion rules.
-
-Improved ranking and search-relevance tuning.
-
-Additional document parsers for new file formats.
-
-A settings panel for diagnostics verbosity and indexing preferences.
-
-Usage statistics and corpus-level summaries.
-
-Improved packaging and installer workflows for public distribution.
-
-These improvements would build naturally on the existing architecture without requiring a full redesign.
-
-Conclusion
-DesktopSearchApp is a practical desktop search application built to support complex local document collections. Its design reflects both a functional need for fast and transparent file search and a technical interest in modular, service-oriented desktop software engineering.
-
-By combining local indexing, OCR-aware extraction, diagnostics, incremental updates, and a structured WPF interface, the project offers a strong foundation for both practical use and future development. As a GitHub project and downloadable ZIP release, it can serve as a usable tool, a learning project, and a basis for further extension.
