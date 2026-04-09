@@ -1,3 +1,8 @@
+<img width="1399" height="848" alt="image" src="https://github.com/user-attachments/assets/e8ae8953-c61b-4eff-9639-16e100a6ba3f" />
+
+
+
+
 **DesktopSearchApp - Project Overview and Technical Documentation**
 
 <a href="https://doi.org/10.5281/zenodo.19489900"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.19489900.svg" alt="DOI"></a>
