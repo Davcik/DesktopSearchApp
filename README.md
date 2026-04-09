@@ -2,7 +2,6 @@
 
 
 
-
 Version: 1.0
 
 Platform: Windows Desktop
@@ -14,8 +13,6 @@ Search Engine: Lucene.NET
 Document Type: Project Overview
 
 Distribution: GitHub repository and free ZIP download
-
-
 
 
 
@@ -79,7 +76,7 @@ Research and statistical files: .dta, .sav, .rda, .sps, .sas, .sas7bdat, .do, .a
 
 Code and notebook files: .py, .ipynb, .m, .mat, .r
 
-Spreadsheet files: .xlsx, .xls
+Spreadsheet files: .xlsx
 
 Presentation files: .pptx, .ppt
 
