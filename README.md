@@ -1,8 +1,6 @@
 **DesktopSearchApp - Project Overview and Technical Documentation**
 
 
-https://doi.org/10.5281/zenodo.19489900
-
 
 Version: 1.0
 
@@ -16,6 +14,7 @@ Document Type: Project Overview
 
 Distribution: GitHub repository and free ZIP download
 
+**https://doi.org/10.5281/zenodo.19489900**
 
 
 **Project Overview and Technical Documentation**
