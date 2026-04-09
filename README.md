@@ -1,11 +1,18 @@
 #DesktopSearchApp - Project Overview and Technical Documentation
 
+
 Version: 1.0
+
 Platform: Windows Desktop
+
 Framework: C# / WPF / .NET
+
 Search Engine: Lucene.NET
+
 Document Type: Project Overview
+
 Distribution: GitHub repository and free ZIP download
+
 
 
 Project Overview and Technical Documentation
