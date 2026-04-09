@@ -1,4 +1,4 @@
-#DesktopSearchApp - Project Overview and Technical Documentation
+**DesktopSearchApp - Project Overview and Technical Documentation**
 
 
 
@@ -16,13 +16,14 @@ Distribution: GitHub repository and free ZIP download
 
 
 
-Project Overview and Technical Documentation
+**Project Overview and Technical Documentation**
 
 Prepared for repository publication and software distribution.
 
 This document presents the motivation, rationale, design principles, architecture, and technical implementation of DesktopSearchApp. It is intended to accompany the public release of the project on GitHub and to provide users, reviewers, and collaborators with a clear understanding of the application's objectives and internal structure.
 
-Introduction
+**Introduction**
+
 DesktopSearchApp is a Windows desktop application developed to index and search local documents quickly, reliably, and transparently. The application is intended for users who work with large collections of heterogeneous files, including Word documents, PDF files, images, spreadsheets, plain text files, source code, and research-oriented formats.
 
 The application addresses a practical problem frequently encountered in academic, professional, and analytical work: valuable information is often distributed across many folders, formats, and projects, making retrieval slow and inefficient. DesktopSearchApp was designed to offer a local-first search solution that allows users to build a searchable index of their files without relying on external cloud services.
@@ -36,7 +37,8 @@ A second reason for developing the application was the specific need to support 
 
 A third motivation was software engineering oriented. The project provides a concrete example of modular desktop application design in which indexing, extraction, search, diagnostics, and monitoring are isolated into distinct services. This makes the application not only useful in practice but also valuable as a demonstrative or portfolio project.
 
-Project Objectives
+**Project Objectives**
+
 The project was designed with the following objectives:
 
 To provide fast full-text search over a local collection of documents.
