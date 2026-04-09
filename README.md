@@ -1,5 +1,7 @@
 **DesktopSearchApp - Project Overview and Technical Documentation**
 
+https://zenodo.org/badge/DOI/10.5281/zenodo.19489900.svg
+
 
 
 Version: 1.0
