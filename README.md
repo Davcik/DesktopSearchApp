@@ -24,18 +24,19 @@ This document presents the motivation, rationale, design principles, architectur
 
 **Introduction**
 
-DesktopSearchApp is a Windows desktop application developed to index and search local documents quickly, reliably, and transparently. The application is intended for users who work with large collections of heterogeneous files, including Word documents, PDF files, images, spreadsheets, plain text files, source code, and research-oriented formats.
+**DesktopSearchApp** is a Windows desktop application developed to index and search local documents quickly, reliably, and transparently. The application is intended for users who work with large collections of heterogeneous files, including Word documents, PDF files, images, spreadsheets, plain text files, source code, and research-oriented formats.
 
-The application addresses a practical problem frequently encountered in academic, professional, and analytical work: valuable information is often distributed across many folders, formats, and projects, making retrieval slow and inefficient. DesktopSearchApp was designed to offer a local-first search solution that allows users to build a searchable index of their files without relying on external cloud services.
+The application addresses a practical problem frequently encountered in academic, professional, and analytical work: valuable information is often distributed across many folders, formats, and projects, making retrieval slow and inefficient. **DesktopSearchApp** was designed to offer a local-first search solution that allows users to build a searchable index of their files without relying on external cloud services. Unfortunately, the standard Windows Search engine is limited in scope and depth, and often fails to identify existing documents.
 
 The project also serves a broader technical purpose. It demonstrates how file crawling, document extraction, optical character recognition, full-text indexing, diagnostics logging, and incremental file monitoring can be integrated into a desktop application using modern C# and WPF design patterns.
 
-Motivation and Rationale
+**Motivation and Rationale**
+
 The primary motivation behind DesktopSearchApp was the need for a practical and extensible desktop search tool capable of handling mixed-format document collections. Existing tools often focus on narrow document categories, provide limited transparency about extraction quality, or rely on system-level indexing approaches that are difficult to inspect or control.
 
-A second reason for developing the application was the specific need to support research and knowledge-intensive workflows. In many academic and professional environments, users work with scanned articles, statistical files, notebooks, code scripts, and supporting documentation at the same time. DesktopSearchApp was therefore designed to accommodate a broader file ecosystem than a standard office-document search application.
+A second reason for developing the application was the specific need to support research and knowledge-intensive workflows. In many academic and professional environments, users work with scanned articles, statistical files, notebooks, code scripts, and supporting documentation simultaneously. **DesktopSearchApp** was therefore designed to accommodate a broader file ecosystem than a standard office-document search application.
 
-A third motivation was software engineering oriented. The project provides a concrete example of modular desktop application design in which indexing, extraction, search, diagnostics, and monitoring are isolated into distinct services. This makes the application not only useful in practice but also valuable as a demonstrative or portfolio project.
+A third motivation was software engineering-oriented. The project provides a concrete example of modular desktop application design in which indexing, extraction, search, diagnostics, and monitoring are isolated into distinct services. This makes the application not only useful in practice but also valuable as a demonstrative or portfolio project.
 
 **Project Objectives**
 
@@ -55,7 +56,9 @@ To support incremental updates through folder monitoring and file-change detecti
 
 To provide a clear, single-window desktop interface for indexing, searching, previewing, and monitoring results.
 
-Functional Overview
+
+**Functional Overview**
+
 DesktopSearchApp enables a user to select a folder, discover supported files in that folder tree, build a Lucene-based index, and perform searches over titles, file names, and extracted document text. Search results are presented together with metadata such as extraction method, OCR usage, extraction status, and preview content.
 
 The application includes a diagnostics panel in the main user interface so that users can observe system activity during indexing and search operations. This panel records informational messages, warnings, and errors, thereby improving transparency and supporting debugging when extraction or indexing issues occur.
