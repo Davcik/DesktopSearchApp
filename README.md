@@ -53,19 +53,19 @@ A third motivation was software engineering-oriented. The project provides a con
 
 The project was designed with the following objectives:
 
-To provide fast full-text search over a local collection of documents.
+• To provide fast full-text search over a local collection of documents.
 
-To support a wide range of file formats relevant to academic, technical, and professional work.
+• To support a wide range of file formats relevant to academic, technical, and professional work.
 
-To maintain a local-first architecture that preserves privacy and avoids dependence on cloud storage or cloud search services.
+• To maintain a local-first architecture that preserves privacy and avoids dependence on cloud storage or cloud search services.
 
-To support OCR-assisted extraction for files that do not contain directly selectable text.
+• To support OCR-assisted extraction for files that do not contain directly selectable text.
 
-To include diagnostics and fault-tolerant indexing so that problematic files do not stop the entire indexing process.
+• To include diagnostics and fault-tolerant indexing so that problematic files do not stop the entire indexing process.
 
-To support incremental updates through folder monitoring and file-change detection.
+• To support incremental updates through folder monitoring and file-change detection.
 
-To provide a clear, single-window desktop interface for indexing, searching, previewing, and monitoring results.
+• To provide a clear, single-window desktop interface for indexing, searching, previewing, and monitoring results.
 
 
 **Functional Overview**
@@ -187,15 +187,15 @@ Diagnostics are a core feature of **DesktopSearchApp** rather than an afterthoug
 
 _Diagnostics Objectives_
 
-To record application startup and shutdown events.
+• To record application startup and shutdown events.
 
-To report folder selection and indexing activity.
+• To report folder selection and indexing activity.
 
-To capture warnings about skipped, inaccessible, or malformed files.
+• To capture warnings about skipped, inaccessible, or malformed files.
 
-To record search activity and result counts.
+• To record search activity and result counts.
 
-To provide transparency about file-system monitoring events.
+• To provide transparency about file-system monitoring events.
 
 A particularly important technical decision in the project was to prevent a single extraction or indexing failure from terminating the full indexing process. Instead, the application logs the problem and continues. This significantly improves robustness when indexing large and diverse collections of files.
 
@@ -204,13 +204,13 @@ Once an index has been built, DesktopSearchApp can continue monitoring the index
 
 _Monitored Events_
 
-File creation
+• File creation
 
-File modification
+• File modification
 
-File deletion
+• File deletion
 
-File rename
+• File rename
 
 Detected changes are passed into the incremental indexing workflow so that the search index remains synchronized with the folder contents. This approach is considerably more efficient than rebuilding the full index every time a document changes.
 
@@ -240,15 +240,15 @@ The design is intentionally practical rather than ornamental. The aim is to supp
 
 DesktopSearchApp is suitable for several user groups and scenarios:
 
-Academic researchers managing mixed-format document archives.
+• Academic researchers managing mixed-format document archives.
 
-Students searching across reading materials, notes, and project files.
+• Students searching across reading materials, notes, and project files.
 
-Analysts working with reports, spreadsheets, code, and technical notes.
+• Analysts working with reports, spreadsheets, code, and technical notes.
 
-Professionals who need a local search tool for project folders and reference libraries.
+• Professionals who need a local search tool for project folders and reference libraries.
 
-Developers and knowledge workers who want a transparent and extensible desktop indexing solution.
+• Developers and knowledge workers who want a transparent and extensible desktop indexing solution.
 
 The project is especially useful where users prefer local control over their data and want to avoid dependence on cloud indexing systems.
 
