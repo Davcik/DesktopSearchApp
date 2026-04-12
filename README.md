@@ -264,9 +264,6 @@ GitHub repository: source code, documentation, and version history.
 
 ZIP package: convenient downloadable copy for users who prefer a packaged version.
 
-Potential release asset: the ZIP file may also be attached to a GitHub Release for structured version distribution.
-
-This dual distribution approach improves accessibility for both developers and general users.
 
 
 System Requirements
