@@ -266,9 +266,9 @@ ZIP package: convenient downloadable copy for users who prefer a packaged versio
 
 
 
-System Requirements
-Windows 10 or later
+**System Requirements**
 
+Windows 10 or later
 
 Access permissions to folders intended for indexing
 
