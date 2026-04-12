@@ -45,6 +45,8 @@ The application addresses a practical problem frequently encountered in academic
 
 The project also serves a broader technical purpose. It demonstrates how file crawling, document extraction, optical character recognition, full-text indexing, diagnostics logging, and incremental file monitoring can be integrated into a desktop application using modern C# and WPF design patterns.
 
+<br>
+
 **Motivation and Rationale**
 
 The primary motivation behind DesktopSearchApp was the need for a practical and extensible desktop search tool capable of handling mixed-format document collections. Existing tools often focus on narrow document categories, provide limited transparency about extraction quality, or rely on system-level indexing approaches that are difficult to inspect or control.
@@ -168,6 +170,8 @@ The query logic combines exact-term search with prefix-based search so that resu
 **Indexing Workflow**
 
 The indexing workflow begins with folder selection. Once a folder is chosen, the application scans the folder structure, identifies supported files, and passes them through the extraction and indexing pipeline.
+
+<br>
 
 **Indexing Steps**
 
