@@ -318,4 +318,6 @@ Select a result to view the preview information.
 
 Double-click a result to open the original file.
 
+<br>
+
 The Lucene index is stored locally in the user profile under application data, ensuring that the indexed content remains on the local machine.
